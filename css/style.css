@@ -8,7 +8,27 @@
   scroll-behavior: smooth;
   font-family: "Poppins", sans-serif;
 }
+::-webkit-scrollbar {
+        width: 13px;
+    }
+    ::-webkit-scrollbar-track {
+        background: #FFFFFF20;
+    }
+    ::-webkit-scrollbar-thumb { 
+        background: var(--main-color);
+        border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb:hover { 
+        background: var(--main-color); 
+    }
 
+    @-moz-document url-prefix() {
+    * {
+        scrollbar-width: thin;
+        scrollbar-color: var(--main-color) #FFFFFF20;
+    }
+  }
+  
 :root {
   --bg-color: #141414;
   --second-bg-color: #191919;
