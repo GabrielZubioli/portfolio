@@ -497,7 +497,7 @@ span {
 .skill-left .skill-bar .bar{
   width: 100%;
   height: 10px;
-  background-color: var(--second-bg-color);
+  background-color: #272727;
   border-radius: 25px;
   margin-top: 10px;
   position: relative;
@@ -583,7 +583,7 @@ span {
 .circle .points{
   width: 2px;
   height: 20px;
-  background-color: var(--second-bg-color);
+  background-color: #272727;
   position: absolute;
   border-radius: 3px;
   transform: rotate(calc(var(--i)*var(--rot))) translateY(-60px);
