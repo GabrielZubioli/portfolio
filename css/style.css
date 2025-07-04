@@ -83,6 +83,20 @@ section {
   align-items: center;
   justify-content: center;
   gap: 8rem;
+  position: relative;
+  overflow: hidden;
+}
+.home .onda {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.home .onda img {
+  width: 100%;
+  display: block;
 }
 
 .home-content h3 {
@@ -263,6 +277,22 @@ span {
   align-items: center;
   gap: 10rem;
   background: var(--second-bg-color);
+  position: relative;
+  padding-top: 0;
+}
+
+
+.onda-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+.onda-top img {
+  width: 100%;
+  display: block;
+  transform: rotate(180deg);
 }
 
 .about-img {
@@ -290,6 +320,12 @@ span {
   transform: translateY(0);
 }
 
+.about-content,
+.about-img {
+  position: relative;
+  z-index: 2;
+  padding-top: 10rem;
+}
 .about-content h2 {
   text-align: left;
   line-height: 1.5;
@@ -607,8 +643,22 @@ span {
 
 .contact {
   background-color: var(--second-bg-color);
+  position: relative;
+  overflow: hidden;
 }
 
+.onda-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.onda-bottom img {
+  width: 100%;
+  display: block;
+}
 .contact h2 {
   margin-bottom: 3rem;
 }
