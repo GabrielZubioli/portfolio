@@ -90,3 +90,8 @@ const headingObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.3 });
 
 headings.forEach(heading => headingObserver.observe(heading));
+
+window.addEventListener('DOMContentLoaded', () => {
+  const navbar = document.querySelector('.navbar');
+  navbar.classList.add('animate-navbar');
+});
