@@ -19,10 +19,11 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="styles/style.css" />
   </head>
 
   <body>
+    <main>
     <header class="header">
       <a href="#home" class="logo">G<span>Z</span></a>
       <i id="menu-icon" class="material-symbols-outlined">menu</i>
@@ -136,58 +137,11 @@
 
     <section class="projects" id="projects">
         <h2 class="heading">Projetos</h2>
-
-        <div class="projects-container">
-            <div class="projects-box">
-                <img src="images/login.PNG" alt="">
-                <div class="projects-info">
-                    <h4>Tela de Login</h4>
-                    <p>Tela de login responsiva usando Html, Css e JavaScript</p>
-                    <a href="https://github.com/GabrielZubioli/responsive-login-screen"><i class="fa-solid fa-link"></i></a>
-                </div>
-            </div>
-            <div class="projects-box">
-                <img src="images/calculadora.PNG" alt="">
-                <div class="projects-info">
-                    <h4>Calculadora Basica</h4>
-                    <p>Este é um projeto simples de calculadora web, desenvolvido com HTML, CSS e JavaScript, e containerizado usando Docker.</p>
-                    <a href="https://github.com/GabrielZubioli/basic-calculator"><i class="fa-solid fa-link"></i></a>
-                </div>
-            </div>
-            <div class="projects-box">
-                <img src="images/capitais.PNG" alt="">
-                <div class="projects-info">
-                    <h4>Jogo das Capitais</h4>
-                    <p>Jogo desenvolvido em PHP. Nele, você deve escolher a alternativa que corresponde à capital do país acima.</p>
-                    <a href="https://github.com/GabrielZubioli/capitals-game"><i class="fa-solid fa-link"></i></a>
-                </div>
-            </div>
-            <div class="projects-box">
-                <img src="images/bcg.png" alt="">
-                <div class="projects-info">
-                    <h4>BCG Constructions</h4>
-                    <p>Sistema criado para auxiliar mestres de obras no armazenamento e gerenciamento de suas informações.</p>
-                    <a href="https://master.dj1f6qwm3bw85.amplifyapp.com/login"><i class="fa-solid fa-link"></i></a>
-                </div>
-            </div>
-                <div class="projects-box">
-                <img src="images/loja.png" alt="">
-                <div class="projects-info">
-                    <h4>Loja de Produtos</h4>
-                    <p>Loja de produtos criada em React, permite fazer login e selecionar produtos favoritos</p>
-                    <a href="https://github.com/GabrielZubioli/fake-store-react"><i class="fa-solid fa-link"></i></a>
-                </div>
-            </div>
-            <div class="projects-box">
-                <img src="images/Sistema.png" alt="">
-                <div class="projects-info">
-                    <h4>Sistema de Notas</h4>
-                    <p>Sistema criado em C#, que permite o professor ter o armazenamento e gerenciamento das notas de seus alunos.</p>
-                    <a href="https://github.com/GabrielZubioli/system-notes"><i class="fa-solid fa-link"></i></a>
-                </div>
-            </div>
+        <div class="container">
+        <ul id="projects-container"></ul>
         </div>
     </section>
+
     <section class="skills" id="skills">
         <div>
             <h2 class="heading">Skills</h2>
@@ -297,7 +251,6 @@
        
     </section>
 
-
     <section class="contact" id="contact">
         <div class="bubbles">
             <div></div>
@@ -363,6 +316,9 @@
            © Gabriel Zubioli | All Rights Reserved
         </p>
     </footer>
-    <script src="js/script.js"></script>
+    <script type="module" src="components/js/projects-section.js"></script>
+
+    <script src="components/script.js"></script>
+    </main>
   </body>
 </html>

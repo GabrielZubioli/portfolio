@@ -526,89 +526,153 @@ span {
   margin-bottom: 5rem;
 }
 
-.projects-container {
+body main section.projects #projects-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  justify-content: center;
   align-items: center;
-  gap: 2.5rem;
+  place-items: center;
+  gap: 20px;
 }
 
-.projects-container .projects-box {
-  position: relative;
-  border-radius: 2rem;
-  box-shadow: 0 0 1rem var(--bg-color);
+body main section.projects #projects-container .card {
   overflow: hidden;
+  position: relative;
+  width: 450px;
+  border-radius: 10px;
+  height: 270px;
+  background: var(--bg-color);
   display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease;
 }
 
-.projects-box img {
-  filter: blur(5px);
+body main section.projects #projects-container .card:hover {
+  transform: scale(1.05);
+  border: 2px solid var(--main-color);
+}
+
+body main section.projects #projects-container .card:hover .animation {
+  border-radius: 0;
+  height: 100%;
   width: 100%;
-  transition: 0.5s ease;
 }
 
-.projects-box:hover img {
-  filter: blur(0px);
-  transform: scale(1.1);
+body main section.projects #projects-container .card:hover .details {
+  width: 450px;
 }
 
-.projects-box .projects-info {
-  background: rgba(0, 0, 0, 0.7);
+body main section.projects #projects-container .card .img {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+body main section.projects #projects-container .card .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+body main section.projects #projects-container .card .animation {
+  width: 0%;
+  height: 0%;
   position: absolute;
-  bottom: 0;
+  overflow: hidden;
+  z-index: 2;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--bg-color);
+  transition: all 0.3s ease;
+}
+
+body main section.projects #projects-container .card .details {
+  width: 450px;
+  padding: 20px;
+  position: absolute;
+  height: 270px;
+  overflow: hidden;
+  transition: 345ms;
+}
+
+body main section.projects #projects-container .card .details::before {
+  content: "";
+  position: absolute;
+  top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  background-color: var(--bg-color);
+  background-size: 100% 100%;
+  z-index: -1;
+}
+
+body main section.projects #projects-container .card .details .skill-tags {
   display: flex;
-  justify-content: center;
   align-items: center;
-  flex-direction: column;
-  text-align: center;
-  padding: 0 4rem;
-  cursor: pointer;
-  transition: 0.5s ease;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
 }
 
-.projects-box .projects-info:hover {
-  background: radial-gradient(rgba(0, 0, 0, 0.3), var(--main-color));
-  transform: scale(1.1);
-}
-
-.projects-box .projects-info:hover h4 {
-  color: white;
-}
-
-.projects-box .projects-info:hover p {
-  color: white;
-}
-
-.projects-info h4 {
-  font-size: 3rem;
-  color: var(--main-color);
-  font-weight: 800;
-}
-
-.projects-info p {
-  color: var(--text-color);
-  font-size: 1.6rem;
-  margin: 0.3rem 0 1rem;
-  font-weight: 600;
-}
-
-.projects-info a {
-  color: var(--text-color);
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  width: 5rem;
-  height: 5rem;
+body main section.projects #projects-container .card .details .skill-tags .tag {
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin: 5px;
+  font-size: 1.3rem;
+  display: inline-block;
   background: var(--main-color);
-  border-radius: 50%;
+  color: var(--text-color);
+  font-weight: bold;
 }
 
-.projects-info a i {
-  font-size: 3rem;
+body main section.projects #projects-container .card .details h3 {
+  color: var(--main-color);
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 2.5rem;
+}
+
+body main section.projects #projects-container .card .details p {
   color: var(--text-color);
+  text-align: justify;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  height: 70px;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+body main section.projects #projects-container .card .details .links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+}
+
+body main section.projects #projects-container .card .details .links a {
+  width: 45%;
+  display: block;
+  padding: 10px 0;
+  font-weight: bold;
+  text-align: center;
+  margin: 0 auto;
+}
+body main section.projects #projects-container .card .details .links span {
+  display: block;
+  margin: auto;
+  color: var(--main-color);
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
 }
 
 .skills {
