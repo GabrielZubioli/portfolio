@@ -2,7 +2,7 @@ export const Projects = [
   {
     project: "BCG Constructions",
     image: "bcg.png",
-    skills: ["React", "NodeJs", "Postgres"],
+    skills: ["React", "NodeJs", "PostgreSQL"],
     description:
       "Sistema criado para auxiliar mestres de obras no armazenamento e gerenciamento de suas informações",
     repository: "",
