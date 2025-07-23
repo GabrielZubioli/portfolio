@@ -37,18 +37,21 @@ function renderCircles() {
     let points = "";
     const rotate = 360 / dots;
 
+    const pointsContainer = elem.querySelector('.points-container');
+    pointsContainer.innerHTML = ""; // Limpa só os pontos, não a imagem
+
     for (let i = 0; i < dots; i++) {
       points += `<div class="points" style="--i:${i}; --rot:${rotate}deg"></div>`;
     }
+    pointsContainer.innerHTML = points;
 
-    elem.innerHTML = points;
-
-    const pointsMarked = elem.querySelectorAll(".points");
+    const pointsMarked = pointsContainer.querySelectorAll(".points");
     for (let i = 0; i < percent; i++) {
       pointsMarked[i].classList.add("marked");
     }
   });
 }
+
 
 
 const skillsSection = document.querySelector('.skills');
@@ -63,16 +66,14 @@ const observer = new IntersectionObserver((entries) => {
         bar.classList.add('animate');
       });
       renderCircles();
-
     } else {
       skillBars.forEach(bar => {
         bar.classList.remove('animate');
       });
-      const circles = document.querySelectorAll(".circle");
-      circles.forEach(c => c.innerHTML = "");
     }
   });
 }, { threshold: 0.5 });
+
 
 observer.observe(skillsSection);
 

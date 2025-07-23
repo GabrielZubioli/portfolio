@@ -546,6 +546,7 @@ body main section.projects #projects-container .card {
   justify-content: center;
   align-items: center;
   transition: transform 0.3s ease;
+  cursor: pointer;
 }
 
 body main section.projects #projects-container .card:hover {
@@ -730,23 +731,65 @@ body main section.projects #projects-container .card .details .links span {
   transition: width 2s ease;
 }
 
-.skill-bar.animate .bar .html {
-  width: 80%;
-}
-.skill-bar.animate .bar .css {
-  width: 75%;
-}
-.skill-bar.animate .bar .js {
-  width: 60%;
-}
-.skill-bar.animate .bar .react {
-  width: 60%;
-}
-.skill-bar.animate .bar .node {
+.skill-bar.animate .bar .ux {
   width: 70%;
 }
-.skill-bar.animate .bar .python {
-  width: 67%;
+.skill-bar.animate .bar .tp {
+  width: 100%;
+}
+.skill-bar.animate .bar .react {
+  width: 30%;
+}
+.skill-bar.animate .bar .node {
+  width: 57%;
+}
+.skill-bar.animate .bar .ads {
+  width: 100%;
+}
+
+#skills-container {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 0;
+  justify-content: center;
+}
+
+#skills-container li {
+  margin-top: 19px;
+  width: 100px;
+  text-align: center;
+}
+
+.circle {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  background: var(--second-bg-color);
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+.circle:hover{
+  box-shadow: 0 0 25px var(--main-color);
+  transform: scale(1.1) translateY(-10px);
+  background: var(--text-color);
+}
+
+.circle img {
+  max-width: 60%;
+  max-height: 60%;
+  object-fit: contain;
+}
+
+.name-skill {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--text-color);
 }
 
 .professional {
@@ -783,24 +826,6 @@ body main section.projects #projects-container .card .details .links span {
   color: var(--text-color);
   text-align: center;
   display: block;
-}
-
-.circle {
-  width: 100%;
-  position: relative;
-  height: 210px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.circle .points {
-  width: 2px;
-  height: 20px;
-  background-color: #272727;
-  position: absolute;
-  border-radius: 3px;
-  transform: rotate(calc(var(--i) * var(--rot))) translateY(-60px);
 }
 
 .points.marked {
