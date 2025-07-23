@@ -38,7 +38,7 @@ function renderCircles() {
     const rotate = 360 / dots;
 
     const pointsContainer = elem.querySelector('.points-container');
-    pointsContainer.innerHTML = ""; // Limpa só os pontos, não a imagem
+    pointsContainer.innerHTML = "";
 
     for (let i = 0; i < dots; i++) {
       points += `<div class="points" style="--i:${i}; --rot:${rotate}deg"></div>`;

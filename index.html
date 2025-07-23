@@ -19,7 +19,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
 
   <body>
@@ -76,25 +76,25 @@
             ></a>
           </div>
           <div class="btn-container">
-            <a href="assets/Gabriel Zubioli - CV.pdf" class="btn" download=""
+            <a href="components/static/pdf/Gabriel Zubioli - CV.pdf" class="btn" download=""
               >Download CV</a
             >
           </div>
         </div>
         <div class="home-img">
-          <img src="images/image.png" alt="" />
+          <img src="components/static/img/home/image.png" alt="" />
         </div>
         <div class="onda">
-          <img src="images/onda3.png" alt="Onda" />
+          <img src="components/static/img/home/onda3.png" alt="Onda" />
         </div>
       </section>
 
       <section class="about" id="about">
         <div class="onda-top">
-          <img src="images/liquido.png" alt="Onda Topo" />
+          <img src="components/static/img/about/liquido.png" alt="Onda Topo" />
         </div>
         <div class="about-img">
-          <img src="images/image-sobre.png" alt="" />
+          <img src="components/static/img/about/image-sobre.png" alt="" />
         </div>
 
         <div class="about-content">
@@ -147,7 +147,7 @@
             <a href="#contact" class="btn">Entre em contato</a>
           </div>
           <div class="services-box">
-            <i class="fa-solid fa-clipboard"></i>
+            <i class="fa-solid fa-bug"></i>
             <h3>Analista de Testes</h3>
             <p>
               Garanto a qualidade das aplicações por meio de testes rigorosos.
@@ -175,6 +175,14 @@
             </p>
             <a href="#contact" class="btn">Entre em contato</a>
           </div>
+          <div class="services-box">
+            <i class="fa-solid fa-compass-drafting"></i>
+            <h3>Designer UX | UI</h3>
+            <p>
+                Compreendo as necessidades dos usuários e transformo essas demandas em produtos digitais intuitivos, com foco na experiência do usuário e em interfaces visuais atrativas
+            </p>
+            <a href="#contact" class="btn">Entre em contato</a>
+          </div>
         </div>
       </section>
 
@@ -192,7 +200,10 @@
 
         <div class="skill-main">
           <div class="skill-left">
-            <h3>Cursando</h3>
+            <div class="skills-title">
+              <h3>Cursando</h3>
+              <i class="fa-solid fa-graduation-cap"></i>
+            </div>
             <div class="skill-bar">
 
               <div class="info">
@@ -265,7 +276,10 @@
             </div>
           </div>
           <div class="skill-right">
-            <h3>Tecnologias</h3>
+            <div class="skills-title">
+              <h3>Tecnologias</h3>
+              <i class="fa-solid fa-microchip"></i>
+            </div>
             
             <ul id="skills-container">
             </ul>
@@ -323,7 +337,7 @@
           <input type="hidden" name="_captcha" value="false" />
         </form>
         <div class="onda-bottom">
-          <img src="images/onda.png" alt="Onda rodapé" />
+          <img src="components/static/img/contact/onda.png" alt="Onda rodapé" />
         </div>
       </section>
       <footer class="footer">

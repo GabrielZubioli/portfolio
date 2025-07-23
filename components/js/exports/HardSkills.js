@@ -20,7 +20,7 @@ export const HardSkills = [
 	{ skill: "PostgreSQL.png", skillName: "" },
 	{ skill: "MongoDB.png", skillName: "" },
 	{ skill: "Windows.png", skillName: "" },
-	{ skill: "Chrome.png", skillName: "" },
+	{ skill: "Portugol-Studio.png", skillName: "Portugol" },
 	{ skill: "Arduino.png", skillName: "" },
 	{ skill: "Docker.webp", skillName: "" },
 ];
