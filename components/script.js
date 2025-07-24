@@ -70,6 +70,7 @@ window.addEventListener('DOMContentLoaded', () => {
   const navbar = document.querySelector('.navbar');
   navbar.classList.add('animate-navbar');
 });
+
  document.addEventListener("DOMContentLoaded", () => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -87,7 +88,7 @@ window.addEventListener('DOMContentLoaded', () => {
           techItems.forEach((li, i) => {
             setTimeout(() => {
               li.classList.add("aparecendo");
-            }, i * 150);
+            }, i * 80);
           });
 
         } else {
