@@ -493,7 +493,6 @@ span {
   text-align: center;
   border: 0.2rem solid var(--bg-color);
   cursor: pointer;
-  transition: 0.4s ease;
 }
 
 .service-container .services-box:hover {
@@ -501,6 +500,18 @@ span {
   transform: scale(1.02);
   background-color: white;
   color: black;
+}
+
+.services-box {
+  opacity: 0;
+  transform: translatex(90px);
+  transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.services-box.aparecendo {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .services-box i {
@@ -520,6 +531,18 @@ span {
 
 .projects {
   background: var(--second-bg-color);
+}
+
+.card {
+  opacity: 0;
+  transform: translatex(-90px);
+  transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), 
+              transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card.aparecendo {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .projects h2 {
@@ -545,7 +568,6 @@ span {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: transform 0.3s ease;
   cursor: pointer;
 }
 
@@ -850,6 +872,7 @@ span {
   transition: 0.6s ease;
   cursor: pointer;
 }
+
 .circle:hover {
   border-radius: 100px;
   box-shadow: 0 0 25px var(--main-color);
