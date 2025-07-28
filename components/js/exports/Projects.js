@@ -53,4 +53,13 @@ export const Projects = [
     repository: "system-notes",
     pages: "",
   },
+  {
+    project: "Death Code",
+    image: "death-code.png",
+    skills: ["HTML", "CSS", "JavaScript"],
+    description:
+      "Jogo baseado no famoso anime Death Note. O objetivo é investigar pistas ocultas, quebrar códigos e descobrir o verdadeiro culpado antes que seja tarde demais.",
+    repository: "death-code",
+    pages: "",
+  },
 ];

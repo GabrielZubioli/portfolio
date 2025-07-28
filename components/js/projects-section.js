@@ -24,5 +24,9 @@ const contentTemplate = (object) => `
 `;
 
 document.addEventListener("DOMContentLoaded", () => {
-	new Consumer("#projects-container", contentTemplate, Projects);
+  new Consumer("#projects-container", contentTemplate, Projects);
+
+  setTimeout(() => {
+    document.querySelectorAll(".card").forEach(el => unifiedObserver.observe(el));
+  }, 100);
 });
