@@ -8,6 +8,7 @@
   scroll-behavior: smooth;
   font-family: "Poppins", sans-serif;
 }
+
 ::-webkit-scrollbar {
   width: 13px;
 }
@@ -15,7 +16,7 @@
   background: #ffffff20;
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--main-color);
+  background: var(--second-main-color);
   border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb:hover {
@@ -34,6 +35,8 @@
   --second-bg-color: #191919;
   --text-color: white;
   --main-color: #c300ff;
+  --second-main-color: #7000FF;
+  --color-gradient: linear-gradient(to left, #7000FF, #C300FF);
   --neon-box-shadow: 0 0 0.5rem #c300ff;
 }
 
@@ -146,6 +149,7 @@ section {
 span {
   color: var(--main-color);
 }
+
 .logo span {
   text-shadow: 0 0 25px var(--main-color), 0 0 100px var(--main-color);
 }
@@ -210,12 +214,11 @@ span {
 
 .btn {
   display: inline-block;
-  padding: 1rem 2.8rem;
-  background: var(--main-color);
+  padding: 1.2rem 2.8rem;
+  background: var(--color-gradient);
   border-radius: 4rem;
   font-size: 1.6rem;
   color: white;
-  border: 2px solid transparent;
   letter-spacing: 0.1rem;
   font-weight: 600;
   transition: 0.3s ease;
@@ -493,6 +496,7 @@ span {
   text-align: center;
   border: 0.2rem solid var(--bg-color);
   cursor: pointer;
+  transition: ease 0.6s;
 }
 
 .service-container .services-box:hover {
@@ -609,7 +613,7 @@ span {
   justify-content: center;
   align-items: center;
   background: var(--bg-color);
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
 }
 
 .projects #projects-container .card .details {
@@ -780,7 +784,7 @@ span {
   height: 100%;
   position: absolute;
   left: 0;
-  background: var(--main-color);
+  background: var(--color-gradient);
   box-shadow: var(--neon-box-shadow);
   border-radius: 25px;
   transition: width 2s ease;

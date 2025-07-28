@@ -106,6 +106,26 @@ document
 document.querySelectorAll(".card").forEach((el) => unifiedObserver.observe(el));
 
 
+const skillBars = document.querySelectorAll('.skill-bar');
 
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      skillBars.forEach(bar => {
+        bar.classList.remove('animate');
+        void bar.offsetWidth;
+        bar.classList.add('animate');
+      });
+      renderCircles();
+    } else {
+      skillBars.forEach(bar => {
+        bar.classList.remove('animate');
+      });
+    }
+  });
+}, { threshold: 0.5 });
+
+
+observer.observe(skillsSection);
 
   
