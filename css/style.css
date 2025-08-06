@@ -791,7 +791,7 @@ span {
 }
 
 .skill-bar.animate .bar .ux {
-  width: 70%;
+  width: 100%;
 }
 .skill-bar.animate .bar .tp {
   width: 100%;
