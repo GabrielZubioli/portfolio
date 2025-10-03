@@ -35,8 +35,8 @@
   --second-bg-color: #191919;
   --text-color: white;
   --main-color: #c300ff;
-  --second-main-color: #7000FF;
-  --color-gradient: linear-gradient(to left, #7000FF, #C300FF);
+  --second-main-color: #7000ff;
+  --color-gradient: linear-gradient(to left, #7000ff, #c300ff);
   --neon-box-shadow: 0 0 0.5rem #c300ff;
 }
 
@@ -401,6 +401,9 @@ span {
   padding-top: 0;
 }
 
+
+
+
 .onda-top {
   position: absolute;
   top: 0;
@@ -455,10 +458,67 @@ span {
 }
 
 .about-content p {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   margin: 2rem 0 3rem;
 }
 
+.training {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10rem;
+  background: var(--second-bg-color);
+  position: relative;
+  padding-top: 0;
+  flex-direction: row-reverse;
+}
+
+.education {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.edu-item h3 {
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.edu-item h3 span {
+  color: var(--main-color);
+  font-weight: 600;
+}
+
+
+.edu-item h1 {
+  font-size: 1.6rem;
+  color: var(--text-color);
+  opacity: 0.8;
+  font-weight: 300;
+}
+
+.edu-item p {
+  font-size: 1.8rem;
+  color: var(--text-color);
+  opacity: 0.8;
+  font-weight: 300;
+  margin-top: 0.1rem;
+}
+
+
+@media (max-width: 768px) {
+  .about,
+  .training {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-img img {
+    width: 60vw;
+  }
+}
 .about-content .text-animation span::before {
   content: "Desenvolvedor FullStack";
   color: var(--main-color);
@@ -540,8 +600,8 @@ span {
 .card {
   opacity: 0;
   transform: translatex(-90px);
-  transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), 
-              transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .card.aparecendo {
@@ -949,7 +1009,7 @@ span {
 }
 
 .contact {
-  background-color: var(--second-bg-color);
+  background-color: var(--bg-color);
   position: relative;
   overflow: hidden;
 }
@@ -988,7 +1048,7 @@ span {
   padding: 1.5rem;
   font-size: 1.6rem;
   color: var(--text-color);
-  background: var(--bg-color);
+  background: var(--second-bg-color);
   border-radius: 0.8rem;
   margin: 1rem 0;
   resize: none;
@@ -1218,4 +1278,224 @@ span {
     flex-wrap: wrap;
     gap: 2rem;
   }
+}
+
+.reviews {
+  flex-direction: column;
+  background-color: var(--second-bg-color);
+}
+
+.slide-container {
+  width: 100%;
+  padding: 40px 0;
+  opacity: 0;
+  transform: translateY(80px);
+  transition: all 0.8s ease-in-out;
+}
+
+.slide-container.aparecendo {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.slide-content {
+  margin: 0 40px;
+  overflow: hidden;
+  border-radius: 25px;
+}
+
+.card {
+  width: 320px;
+  border-radius: 25px;
+  background-color: #fff;
+}
+
+.image-content,
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 14px;
+}
+
+.image-content {
+  position: relative;
+  row-gap: 5px;
+  padding: 25px 0;
+}
+
+.overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--main-color);
+  border-radius: 25px 25px 0 25px;
+}
+
+.overlay {
+  background-color: var(--main-color);
+  background-image: url("/components/static/img/reviews/textura.avif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: overlay;
+}
+
+.overlay::before,
+.overlay::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -40px;
+  height: 40px;
+  width: 40px;
+  background-color: var(--main-color);
+}
+
+.overlay::after {
+  border-radius: 0 25px 0 0;
+  background-color: #fff;
+}
+
+.card-image {
+  position: relative;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background: #fff;
+  padding: 3px;
+}
+
+.card-image .card-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid var(--main-color);
+}
+
+.name {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--bg-color);
+}
+
+.reviews p {
+  font-size: 20px;
+  color: var(--second-bg-color);
+  text-align: center;
+  margin: 2rem;
+}
+
+.reviews btn {
+  display: block;
+  color: var(--main-color);
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 5px;
+}
+.reviews .heading {
+  margin-bottom: 3rem;
+}
+
+.reviews .btn:hover {
+  box-shadow: none;
+}
+
+.button:hover {
+  background: var(--main-color);
+}
+
+.swiper-navBtn {
+  color: #d859ff;
+  transition: color 0.3s ease;
+}
+.swiper-navBtn:hover {
+  color: var(--second-main-color);
+}
+
+.swiper-navBtn::before,
+.swiper-navBtn::after {
+  font-size: 40px;
+}
+
+.swiper-button-next {
+  right: 0;
+}
+
+.swiper-button-prev {
+  left: 0;
+}
+
+.card-content .description {
+  max-height: 120px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 6px;
+}
+
+.card-content .description::-webkit-scrollbar {
+  width: 4px;
+}
+
+.card-content .description::-webkit-scrollbar-thumb {
+  background-color: var(--main-color);
+  border-radius: 4px;
+}
+
+.card-content .description::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.whatsapp-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  background-color: #25d366;
+  border-radius: 50%;
+  padding: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  transition: transform 0.2s ease;
+}
+
+.whatsapp-btn img {
+  width: 40px;
+  height: 40px;
+}
+
+.whatsapp-btn:hover {
+  transform: scale(1.1);
+}
+
+@media screen and (max-width: 768px) {
+  .slide-content {
+    margin: 0 10px;
+  }
+  .swiper-navBtn {
+    display: none;
+  }
+}
+
+.slider {
+  width: 100%;
+  overflow: hidden;
+  margin: auto;
+}
+
+.slide-track {
+  display: flex;
+  gap: 20px;
+}
+
+.slide {
+  width: 200px;
+  flex-shrink: 0;
+}
+
+.slide img {
+  width: 170px;
+  display: block;
 }
