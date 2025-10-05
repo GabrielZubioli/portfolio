@@ -401,9 +401,6 @@ span {
   padding-top: 0;
 }
 
-
-
-
 .onda-top {
   position: absolute;
   top: 0;
@@ -491,7 +488,6 @@ span {
   font-weight: 600;
 }
 
-
 .edu-item h1 {
   font-size: 1.6rem;
   color: var(--text-color);
@@ -506,7 +502,6 @@ span {
   font-weight: 300;
   margin-top: 0.1rem;
 }
-
 
 @media (max-width: 768px) {
   .about,
@@ -1457,7 +1452,7 @@ span {
   background-color: #25d366;
   border-radius: 50%;
   padding: 12px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
   transition: transform 0.2s ease;
 }
 
@@ -1479,23 +1474,46 @@ span {
   }
 }
 
-.slider {
+.carousel {
+  margin: 20px auto;
   width: 100%;
-  overflow: hidden;
-  margin: auto;
+  display: flex;
+  overflow-x: auto;
 }
 
-.slide-track {
+.carousel::-webkit-scrollbar{
+  display: none;
+}
+
+.group {
+
   display: flex;
-  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+  animation: spin 15s infinite linear;
+  padding-right: 2em;
 }
 
 .slide {
-  width: 200px;
-  flex-shrink: 0;
+  flex: 0 0 250px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #eee;
 }
 
 .slide img {
-  width: 170px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   display: block;
+}
+
+@keyframes spin {
+  from {translate: 0;}
+  to {translate: -100%;} 
 }

@@ -133,26 +133,3 @@ const swiper = new Swiper(".slide-content", {
     950: { slidesPerView: 2 },
   },
 });
-
-const track = document.getElementById('slideTrack');
-let speed = 1;
-let pos = 0;
-
-track.innerHTML += track.innerHTML;
-
-const slides = track.children;
-let totalWidth = 0;
-for (let i = 0; i < slides.length / 2; i++) {
-  totalWidth += slides[i].offsetWidth + 20;
-}
-
-function animate() {
-  pos -= speed;
-  if (Math.abs(pos) >= totalWidth) {
-    pos = 0;
-  }
-  track.style.transform = `translateX(${pos}px)`;
-  requestAnimationFrame(animate);
-}
-
-animate();
