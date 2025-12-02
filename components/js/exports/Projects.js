@@ -62,4 +62,13 @@ export const Projects = [
     repository: "death-code",
     pages: "",
   },
+  {
+    project: "Integração via OAuth 2.0",
+    image: "api-pagbank.png",
+    skills: ["PHP", "Laravel"],
+    description:
+      "Integração com a API do PagBank utilizando OAuth 2.0 e Checkout para autenticação, autorização e processamento de pagamentos.",
+    repository: "",
+    pages: "",
+  },
 ];
