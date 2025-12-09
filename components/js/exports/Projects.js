@@ -71,4 +71,13 @@ export const Projects = [
     repository: "",
     pages: "",
   },
+  {
+    project: "Formulário de Captura de Dados",
+    image: "wordpress.png",
+    skills: ["Wordpress", "CSS", "HTML", "JavaScript"],
+    description:
+      "Formulário de captura de dados feito em Wordpress para a solicitação de empréstimos financeiros.",
+    repository: "",
+    pages: "",
+  },
 ];
