@@ -28,7 +28,7 @@ export const Projects = [
   },
   {
     project: "Loja de Produtos",
-    image: "loja.png",
+    image: "loja2.png",
     skills: ["React", "MongoDB"],
     description:
       "Loja de produtos criada em React, permite fazer login e selecionar produtos favoritos",
