@@ -1,7 +1,7 @@
 export const Projects = [
   {
     project: "BCG Constructions",
-    image: "bcg2.png",
+    image: "bcg.png",
     skills: ["React", "NodeJs", "PostgreSQL"],
     description:
       "Sistema criado para auxiliar mestres de obras no armazenamento e gerenciamento de suas informações",
@@ -28,7 +28,7 @@ export const Projects = [
   },
   {
     project: "Loja de Produtos",
-    image: "loja2.png",
+    image: "loja.png",
     skills: ["React", "MongoDB"],
     description:
       "Loja de produtos criada em React, permite fazer login e selecionar produtos favoritos",
@@ -37,7 +37,7 @@ export const Projects = [
   },
   {
     project: "Tela de Login",
-    image: "login2.PNG",
+    image: "login.png",
     skills: ["HTML", "CSS", "JavaScript"],
     description:
       "Tela de login responsiva desenvolvida para praticar animações e responsividade",
@@ -64,7 +64,7 @@ export const Projects = [
   },
   {
     project: "Integração via OAuth 2.0",
-    image: "api-pagbank2.png",
+    image: "pagbank.png",
     skills: ["PHP", "Laravel"],
     description:
       "Integração com a API do PagBank utilizando OAuth 2.0 e Checkout para autenticação, autorização e processamento de pagamentos.",
