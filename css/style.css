@@ -10,16 +10,20 @@
 }
 
 ::-webkit-scrollbar {
+  background-color: var(--bg-color);
   width: 13px;
 }
 ::-webkit-scrollbar-track {
+  background-color: var(--bg-color);
   background: #ffffff20;
 }
 ::-webkit-scrollbar-thumb {
+  background-color: var(--bg-color);
   background: var(--second-main-color);
   border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb:hover {
+  background-color: var(--bg-color);
   background: var(--main-color);
 }
 
@@ -45,7 +49,7 @@ html {
   overflow-x: hidden;
 }
 body {
-  background: var(--bg-color);
+  background: var(--main-color);
   color: var(--text-color);
 }
 .header {
@@ -117,6 +121,7 @@ section {
 }
 
 .home {
+  background-color: var(--bg-color);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -533,6 +538,10 @@ span {
 
 .services h2 {
   margin-bottom: 5rem;
+}
+
+.services{
+  background-color: var(--bg-color);
 }
 
 .service-container {
@@ -1196,7 +1205,6 @@ span {
 
   .home {
     flex-direction: column;
-    margin: 5rem 4rem;
     gap: 2rem;
   }
 

@@ -10,7 +10,7 @@ export const Projects = [
   },
   {
     project: "Calculadora",
-    image: "calculadora.PNG",
+    image: "calculadora.png",
     skills: ["HTML", "CSS", "JavaScript"],
     description:
       "Este é um projeto simples de calculadora web, desenvolvido com HTML, CSS e JavaScript, e containerizado usando Docker.",
@@ -19,7 +19,7 @@ export const Projects = [
   },
   {
     project: "Jogo da Capitais",
-    image: "capitais.PNG",
+    image: "capitais.png",
     skills: ["PHP"],
     description:
       "Jogo desenvolvido em PHP. Nele, você deve escolher a alternativa que corresponde à capital do país acima.",
@@ -46,7 +46,7 @@ export const Projects = [
   },
   {
     project: "Sistema de Notas",
-    image: "Sistema.png",
+    image: "sistema.png",
     skills: ["C#", "MongoDB"],
     description:
       "Sistema criado em C#, que permite o professor ter o armazenamento e gerenciamento das notas de seus alunos.",
