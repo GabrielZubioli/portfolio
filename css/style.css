@@ -1339,7 +1339,7 @@ span {
 
 .overlay {
   background-color: var(--main-color);
-  background-image: url("/components/static/img/reviews/textura.avif");
+  background-image: url("portfolio/components/static/img/reviews/textura.avif");
   background-repeat: no-repeat;
   background-size: cover;
   background-blend-mode: overlay;
