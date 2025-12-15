@@ -94,7 +94,7 @@ export const Projects = [
     image: "race.png",
     skills: ["Arduino", "C"],
     description:
-      "Simulador de corrida totalmente caseiro, desenvolvido com materiais recicláveis e componentes eletrônicos reutilizados. A estrutura foi montada com o uso de Arduino para proporcionar uma experiência de corrida imersiva, utilizando tecnologia de baixo custo e sustentabilidade.",
+      "Simulador de corrida totalmente caseiro, desenvolvido com materiais recicláveis e componentes eletrônicos reutilizados. A estrutura foi montada com o uso de Arduino, utilizando tecnologia de baixo custo e sustentabilidade.",
     repository: "",
     pages: "https://www.linkedin.com/posts/gabriel-zubioli_projetomaker-arduino-eletraeknica-activity-7370139152966770688-N6BL?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD_SV8YBjUF0_odAaDBNtM7eai_6qNM0nCA",
   },
