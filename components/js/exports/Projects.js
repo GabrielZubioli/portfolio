@@ -91,7 +91,7 @@ export const Projects = [
   },
       {
     project: "Simulador de Corrida",
-    image: "admin.png",
+    image: "race.png",
     skills: ["Arduino", "C"],
     description:
       "Simulador de corrida totalmente caseiro, desenvolvido com materiais recicláveis e componentes eletrônicos reutilizados. A estrutura foi montada com o uso de Arduino para proporcionar uma experiência de corrida imersiva, utilizando tecnologia de baixo custo e sustentabilidade.",
