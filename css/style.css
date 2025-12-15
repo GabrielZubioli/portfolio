@@ -623,7 +623,7 @@ span {
   justify-content: center;
   align-items: center;
   place-items: center;
-  gap: 20px;
+  gap: 50px;
 }
 
 .projects #projects-container .card {
