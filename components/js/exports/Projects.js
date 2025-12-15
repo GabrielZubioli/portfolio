@@ -104,7 +104,7 @@ export const Projects = [
     skills: ["Laravel", "PHP", "Blade", "MySQL"],
     description:
       "Projeto desenvolvido para a divulgação de eventos, com foco em comunicar datas, atrações e informações essenciais de forma clara e atrativa, facilitando o alcance do público e impulsionando a participação.",
-    repository: "",
-    pages: "https://github.com/GabrielZubioli/projeto-goevent",
+    repository: "https://github.com/GabrielZubioli/projeto-goevent",
+    pages: "",
   },
 ];
