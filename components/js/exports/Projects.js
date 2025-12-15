@@ -98,4 +98,13 @@ export const Projects = [
     repository: "",
     pages: "https://www.linkedin.com/posts/gabriel-zubioli_projetomaker-arduino-eletraeknica-activity-7370139152966770688-N6BL?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD_SV8YBjUF0_odAaDBNtM7eai_6qNM0nCA",
   },
+        {
+    project: "GoEvent",
+    image: "goevent.png",
+    skills: ["Laravel", "PHP", "Blade", "MySQL"],
+    description:
+      "Projeto desenvolvido para a divulgação de eventos, com foco em comunicar datas, atrações e informações essenciais de forma clara e atrativa, facilitando o alcance do público e impulsionando a participação.",
+    repository: "",
+    pages: "https://github.com/GabrielZubioli/projeto-goevent",
+  },
 ];
