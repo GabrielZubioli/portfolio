@@ -80,4 +80,13 @@ export const Projects = [
     repository: "",
     pages: "",
   },
+    {
+    project: "Painel Administrativo",
+    image: "admin.png",
+    skills: ["Next", "TypeScript", "MySQL"],
+    description:
+      "Painel administrativo completo para facilitar a edição, atualização e manutenção da landing page, permitindo alterar componentes com rapidez, segurança e sem depender de desenvolvedor.",
+    repository: "",
+    pages: "",
+  },
 ];
