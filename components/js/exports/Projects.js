@@ -80,7 +80,34 @@ export const Projects = [
     repository: "",
     pages: "",
   },
-  {
+    {
+    project: "Painel Administrativo",
+    image: "admin.png",
+    skills: ["Next", "TypeScript", "MySQL"],
+    description:
+      "Painel administrativo completo para facilitar a edição, atualização e manutenção da landing page, permitindo alterar componentes com rapidez, segurança e sem depender de desenvolvedor.",
+    repository: "",
+    pages: "",
+  },
+      {
+    project: "Simulador de Corrida",
+    image: "race.png",
+    skills: ["Arduino", "C"],
+    description:
+      "Simulador de corrida totalmente caseiro, desenvolvido com materiais recicláveis e componentes eletrônicos reutilizados. A estrutura foi montada com o uso de Arduino, utilizando tecnologia de baixo custo e sustentabilidade.",
+    repository: "",
+    pages: "https://www.linkedin.com/posts/gabriel-zubioli_projetomaker-arduino-eletraeknica-activity-7370139152966770688-N6BL?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD_SV8YBjUF0_odAaDBNtM7eai_6qNM0nCA",
+  },
+        {
+    project: "GoEvent",
+    image: "goevent.png",
+    skills: ["Laravel", "PHP", "Blade", "MySQL"],
+    description:
+      "Projeto desenvolvido para a divulgação de eventos, com foco em comunicar datas, atrações e informações essenciais de forma clara e atrativa, facilitando o alcance do público e impulsionando a participação.",
+    repository: "https://github.com/GabrielZubioli/projeto-goevent",
+    pages: "",
+  },
+    {
     project: "Landing Page LogosSchools",
     image: "logosschools.png",
     skills: ["WordPres","CSS", "HTML", "JavaScript"],

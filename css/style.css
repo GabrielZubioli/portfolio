@@ -623,15 +623,15 @@ span {
   justify-content: center;
   align-items: center;
   place-items: center;
-  gap: 20px;
+  gap: 50px;
 }
 
 .projects #projects-container .card {
   overflow: hidden;
   position: relative;
-  width: 450px;
+  width: 100%;
   border-radius: 10px;
-  height: 270px;
+  height: 100%;
   background: var(--bg-color);
   display: flex;
   justify-content: center;
@@ -1339,7 +1339,7 @@ span {
 
 .overlay {
   background-color: var(--main-color);
-  background-image: url("/components/static/img/reviews/textura.avif");
+  background-image: url("https://gabrielzubioli.github.io/portfolio/components/static/img/reviews/textura.avif");
   background-repeat: no-repeat;
   background-size: cover;
   background-blend-mode: overlay;
