@@ -80,4 +80,31 @@ export const Projects = [
     repository: "",
     pages: "",
   },
+  {
+    project: "Landing Page LogosSchools",
+    image: "logosschools.png",
+    skills: ["WordPres","CSS", "HTML", "JavaScript"],
+    description:
+      "Desenvolvemos uma Landing Page estratégica para uma Faculdade Evangélica, com foco total na conversão de novos alunos para o período letivo.",
+    repository: "",
+    pages: "https://logos.uverse.com.vc",
+  },
+  {
+    project: "Integração API PIX Sicredi",
+    image: "api_pix.png",
+    skills: ["PHP", "Laravel"],
+    description:
+      "Integração com a API PIX do Sicredi utilizando OAuth 2.0 e Checkout para autenticação, autorização e processamento de pagamentos via PIX.",
+    repository: "",
+    pages: "",
+  },
+    {
+    project: "Integração API Boleto Sicredi",
+    image: "api_boleto.png",
+    skills: ["PHP", "Laravel"],
+    description:
+      "Integração com a API Boleto do Sicredi utilizando OAuth 2.0, autorização e processamento de pagamentos via boleto.",
+    repository: "",
+    pages: "",
+  },
 ];
