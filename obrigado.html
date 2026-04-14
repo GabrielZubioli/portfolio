@@ -1,54 +1,114 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Obrigado!</title>
+    <title>Mensagem enviada | Gabriel Zubioli</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
     <style>
-      body {
-        background-color: #191919;
-        color: white;
+      :root {
+        --bg-color: #111111;
+        --text-color: #f5f7fb;
+        --muted-text: rgba(245, 247, 251, 0.72);
+        --main-color: #c300ff;
+        --second-main-color: #7000ff;
+        --gradient: linear-gradient(135deg, #7000ff 0%, #c300ff 100%);
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
         font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        padding: 2.4rem;
+        background:
+          radial-gradient(circle at top, rgba(195, 0, 255, 0.2), transparent 30%),
+          var(--bg-color);
+        color: var(--text-color);
+      }
+
+      .card {
+        width: min(100%, 58rem);
+        padding: 4rem;
+        border-radius: 3rem;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: rgba(255, 255, 255, 0.04);
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.28);
         text-align: center;
-        padding: 80px 20px;
+      }
+
+      .eyebrow {
+        display: inline-block;
+        margin-bottom: 1.6rem;
+        padding: 0.8rem 1.3rem;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        font-size: 1.1rem;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
       }
 
       h1 {
-        font-size: 3rem;
-        margin-bottom: 20px;
-        color: #c300ff;
+        margin-bottom: 1.2rem;
+        font-size: clamp(3.4rem, 6vw, 5rem);
+        line-height: 1.05;
+      }
+
+      h1 span {
+        color: var(--main-color);
       }
 
       p {
-        font-size: 1.2rem;
-        margin-bottom: 40px;
+        margin-bottom: 3rem;
+        color: var(--muted-text);
+        font-size: 1.7rem;
+        line-height: 1.75;
       }
 
-      .btn{
-        display: inline-block;
-        padding: 1rem 2.8rem;
-        background: #c300ff;
-        border-radius: 4rem;
-        font-size: 1.6rem;
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 5rem;
+        padding: 0 2.4rem;
+        border-radius: 999px;
+        background: var(--gradient);
         color: white;
-        border: 2px solid transparent;
-        letter-spacing: 0.1rem;
+        font-size: 1.5rem;
         font-weight: 600;
-        transition: 0.3s ease;
-        cursor: pointer;
+        text-decoration: none;
+        box-shadow: 0 16px 36px rgba(195, 0, 255, 0.24);
+        transition: transform 220ms ease, box-shadow 220ms ease;
       }
 
       .btn:hover {
-        box-shadow: 0 0 25px #c300ff;
-        transform: scale(1.05);
+        transform: translateY(-0.2rem);
+        box-shadow: 0 18px 42px rgba(195, 0, 255, 0.28);
       }
-
-
     </style>
   </head>
   <body>
-    <h1>Obrigado!</h1>
-    <p>Sua mensagem foi enviada com sucesso. Entrarei em contato em breve.</p>
-    <a href="index.html" class="btn">Voltar ao Portfólio</a>
+    <main class="card">
+      <span class="eyebrow">Contato enviado</span>
+      <h1>Mensagem recebida com <span>sucesso</span>.</h1>
+      <p>
+        Obrigado pelo contato. Sua mensagem foi enviada corretamente e retornarei assim que
+        possível.
+      </p>
+      <a href="index.html" class="btn">Voltar ao portfólio</a>
+    </main>
   </body>
 </html>
