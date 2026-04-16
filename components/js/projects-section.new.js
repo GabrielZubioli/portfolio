@@ -42,12 +42,14 @@ const createCard = (project) => {
   const tagMarkup = visibleSkills
     .map((skill) => `<span class="project-card__tag">${esc(skill)}</span>`)
     .join("");
-n  // embed useful data attributes to populate the modal when clicked
+
+  // embed useful data attributes to populate the modal when clicked
   const dataSkills = esc(project.skills.join(", "));
   const dataImage = esc(project.image);
   const dataTitle = esc(project.project);
   const dataDescription = esc(project.description);
-n  return `
+
+  return `
     <li class="project-card reveal" data-image="${dataImage}" data-title="${dataTitle}" data-description="${dataDescription}" data-skills="${dataSkills}">
       <div class="project-card__media">
         <img src="components/static/img/projects/${project.image}" alt="${esc(project.project)}" />
@@ -144,77 +146,6 @@ const handleToggleClick = (event) => {
   syncToggle(nextCategory);
   renderProjects(nextCategory);
 };
-
-// Modal creation and event handling
-const createModal = () => {
-  const modal = document.createElement("div");
-  modal.id = "project-modal";
-  modal.className = "project-modal";
-  modal.innerHTML = `
-    <div class="project-modal__backdrop" data-close="true"></div>
-    <div class="project-modal__dialog" role="dialog" aria-modal="true" aria-hidden="true">
-      <button class="project-modal__close" aria-label="Fechar modal">×</button>
-      <div class="project-modal__content">
-        <div class="project-modal__media"><img src="" alt="" /></div>
-        <div class="project-modal__info">
-          <h3 class="project-modal__title"></h3>
-          <p class="project-modal__description"></p>
-          <div class="project-modal__tech"><strong>Tecnologias:</strong> <span class="project-modal__skills"></span></div>
-        </div>
-      </div>
-    </div>
-  `;
-  document.body.appendChild(modal);
-  return modal;
-};
-
-const modal = createModal();
-let modalOpen = false;
-
-const openModal = (data) => {
-  if (!modal) return;
-  const dialog = modal.querySelector('.project-modal__dialog');
-  dialog.setAttribute('aria-hidden', 'false');
-  modal.querySelector('.project-modal__media img').src = `components/static/img/projects/${data.image}`;
-  modal.querySelector('.project-modal__media img').alt = data.title;
-  modal.querySelector('.project-modal__title').textContent = data.title;
-  modal.querySelector('.project-modal__description').textContent = data.description;
-  modal.querySelector('.project-modal__skills').textContent = data.skills || '';
-  modal.classList.add('is-open');
-  document.body.classList.add('modal-open');
-  modalOpen = true;
-};
-
-const closeModal = () => {
-  if (!modal) return;
-  modal.querySelector('.project-modal__dialog').setAttribute('aria-hidden', 'true');
-  modal.classList.remove('is-open');
-  document.body.classList.remove('modal-open');
-  modalOpen = false;
-};
-
-// delegate clicks on project cards to open modal (but ignore clicks on links or buttons inside the card)
-elements.container?.addEventListener('click', (event) => {
-  const anchor = event.target.closest('a, button');
-  if (anchor) return; // let links/buttons behave normally
-  const card = event.target.closest('.project-card');
-  if (!card) return;
-  const image = card.dataset.image;
-  const title = card.dataset.title;
-  const description = card.dataset.description;
-  const skills = card.dataset.skills;
-  openModal({ image, title, description, skills });
-});
-
-// close handlers (backdrop or close button)
-modal.addEventListener('click', (e) => {
-  const closeTarget = e.target.closest('[data-close]') || e.target.closest('.project-modal__close');
-  if (closeTarget) closeModal();
-});
-
-// close on ESCndocument.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape' && modalOpen) closeModal();
-});
 
 if (elements.container && elements.buttons.length) {
   elements.toggle?.addEventListener("click", handleToggleClick);

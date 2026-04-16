@@ -66,12 +66,16 @@ if (typeof Swiper !== "undefined") {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
+    // Ensure exactly two full slides are visible on wider screens
     breakpoints: {
+      640: {
+        slidesPerView: 1,
+      },
       768: {
-        slidesPerView: 1.35,
+        slidesPerView: 2,
       },
       1080: {
-        slidesPerView: 2.2,
+        slidesPerView: 2,
       },
     },
   });

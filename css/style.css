@@ -289,6 +289,12 @@ span {
   min-width: 41rem;
   color: var(--main-color);
   text-shadow: 0 0 2.4rem rgba(195, 0, 255, 0.18);
+  /* Ensure animated words fully cover underlying content while animating */
+  background: var(--bg-color);
+  padding: 0 0.8rem 0 0;
+  border-radius: 0.6rem;
+  z-index: 5;
+  isolation: isolate;
 }
 
 .hero-animated-role__text::before {
@@ -907,6 +913,7 @@ span {
 }
 
 .project-card {
+  cursor: pointer;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 1.8rem;
@@ -960,6 +967,8 @@ span {
   position: absolute;
   inset: 0;
   background: linear-gradient(180deg, rgba(17, 17, 17, 0) 50%, rgba(17, 17, 17, 0.12) 100%);
+  /* Allow clicks to pass through the overlay to the card */
+  pointer-events: none;
 }
 
 .project-card__body {
@@ -1294,12 +1303,32 @@ span {
 }
 
 .slide-container {
-  padding: 0.4rem 0 1rem;
+  padding: 0.4rem 0 3.6rem; /* aumentar espaço inferior para os pontos */
+  position: relative;
 }
 
 .slide-content {
   margin: 0 5rem;
   overflow: hidden;
+}
+
+/* posicionar a paginação mais para baixo e centralizada */
+.slide-container .swiper-pagination {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 1.2rem; /* distância do rodapé do container */
+  z-index: 10;
+}
+
+/* em telas pequenas, dar um pouco mais de espaço */
+@media (max-width: 767px) {
+  .slide-container {
+    padding-bottom: 4.8rem;
+  }
+  .slide-container .swiper-pagination {
+    bottom: 0.8rem;
+  }
 }
 
 .review-card {
@@ -1324,7 +1353,7 @@ span {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(180deg, rgba(112, 0, 255, 0.1), rgba(195, 0, 255, 0.55)),
+    linear-gradient(180deg, rgba(112, 0, 255, 0.8), rgba(195, 0, 255, 0.8)),
     url("https://gabrielzubioli.github.io/portfolio/components/static/img/reviews/textura.avif");
   background-size: cover;
   background-repeat: no-repeat;
@@ -1925,6 +1954,208 @@ span {
   .certifications .carousel .slide:hover {
     transform: scale(1.14);
   }
+}
+
+/* Responsive tweaks for tablet and mobile (<=1023px)
+   These rules only add responsive behavior for smaller screens and do not change
+   the existing desktop design (>=1024px). */
+
+@media (max-width: 1023px) {
+  :root { --container-padding: 6%; }
+  html { font-size: 56%; }
+
+  /* Layout adjustments */
+  .home {
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(2rem, 5vw, 3rem);
+  }
+
+  /* Animated role must not force horizontal overflow on tablets */
+  .hero-animated-role__text {
+    min-width: unset;
+    width: auto;
+    overflow: hidden;
+    padding-right: 0.6rem; /* keep cursor visible */
+    font-size: clamp(2.2rem, 3.2vw, 4.2rem);
+  }
+
+  .hero-animated-role {
+    min-height: auto;
+    font-size: clamp(2.4rem, 3vw, 4.6rem);
+    gap: 0.6rem;
+  }
+
+  .home-content h1 {
+    font-size: clamp(4.2rem, 6.2vw, 6.6rem);
+  }
+
+  .home-img {
+    width: min(34rem, 80%);
+    padding: 1rem;
+    margin-inline: auto;
+  }
+
+  .hero-description { font-size: 1.6rem; }
+  .header { padding: 1rem 1.6rem; }
+
+  .projects-grid { grid-template-columns: repeat(2, 1fr); }
+  .service-container { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Mobile and smaller tablets */
+@media (max-width: 767px) {
+  :root { --container-padding: 5%; }
+  html { font-size: 52%; }
+
+  section { padding-top: 11rem; padding-bottom: 8rem; }
+
+  .home { grid-template-columns: 1fr; gap: clamp(2rem, 6vw, 4rem); }
+
+  .hero-animated-role__text {
+    font-size: clamp(1.8rem, 4.2vw, 3.6rem);
+    min-width: unset;
+    padding-right: 0.5rem;
+  }
+
+  .home-content h1 { font-size: clamp(3.2rem, 8vw, 5.6rem); }
+  .hero-description { font-size: 1.5rem; max-width: 100%; }
+  .hero-actions { gap: 1rem; }
+  .home-img { width: min(28rem, 60%); }
+  .projects-grid, .service-container { grid-template-columns: 1fr; }
+  .navbar a { padding: 0.8rem 1rem; font-size: 1.4rem; }
+  .menu-toggle { display: inline-grid; }
+}
+
+/* Phones */
+@media (max-width: 575px) {
+  :root { --container-padding: 4%; }
+  html { font-size: 50%; }
+
+  .home { padding: 8rem var(--container-padding); }
+  section { padding: 8rem var(--container-padding); }
+  .hero-greeting { font-size: clamp(2.2rem, 4.2vw, 3.2rem); }
+  .home-content h1 { font-size: clamp(2.8rem, 8vw, 4.8rem); }
+  .hero-animated-role { font-size: clamp(1.6rem, 5vw, 2.8rem); min-height: auto; }
+  .hero-animated-role__text { padding-right: 0.4rem; font-size: 1.8rem; text-shadow: none; }
+  .btn { padding: 0 1.6rem; min-height: 4.4rem; font-size: 1.4rem; }
+  .social-icons a { width: 4.2rem; height: 4.2rem; font-size: 1.6rem; }
+}
+
+
+
+.project-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.64);
+  opacity: 0;
+  transition: opacity 240ms ease;
+}
+
+.project-modal[hidden] {
+  display: none !important;
+}
+
+.project-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.project-modal.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.project-modal__dialog {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  width: calc(100% - 32px);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+.project-modal__dialog {
+  position: relative;
+  width: min(90rem, 88%);
+  max-width: 1100px;
+  background: linear-gradient(180deg, rgba(18,18,18,0.98), rgba(14,14,14,0.98));
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 1.2rem;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.6);
+  transform: translateY(12px) scale(0.98);
+  opacity: 0;
+  transition: opacity 260ms ease, transform 260ms cubic-bezier(0.2,0.8,0.2,1);
+  pointer-events: auto;
+  overflow: hidden;
+}
+
+.project-modal__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.6rem;
+  padding: 2.2rem;
+  align-items: start;
+}
+
+.project-modal__media img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0.8rem;
+  object-fit: cover;
+}
+
+.project-modal__info { color: var(--muted-text); }
+.project-modal__title { color: #fff; margin-bottom: 0.8rem; font-size: 2.2rem; }
+.project-modal__description { margin-bottom: 1rem; line-height: 1.6; color: rgba(255,255,255,0.9); font-size: 14px; }
+.project-modal__tech { font-size: 1.4rem; color: rgba(255,255,255,0.78); }
+
+.project-modal__close {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.6rem;
+  background: transparent;
+  color: #fff;
+  font-size: 2.4rem;
+  line-height: 1;
+  width: 3.6rem;
+  height: 3.6rem;
+  border-radius: 0.6rem;
+  border: none;
+  cursor: pointer;
+}
+
+.project-modal.is-open .project-modal__dialog { opacity: 1; transform: translateY(0) scale(1); }
+
+/* responsive modal */
+@media (max-width: 991px) {
+  .project-modal__content { grid-template-columns: 1fr; padding: 1.6rem; }
+  .project-modal__title { font-size: 1.8rem; }
+}
+
+@media (max-width: 575px) {
+  .project-modal__dialog { width: calc(100% - 2rem); border-radius: 0.8rem; }
+  .project-modal__title { font-size: 1.6rem; }
+  .project-modal__close { font-size: 2rem; width: 3rem; height: 3rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {

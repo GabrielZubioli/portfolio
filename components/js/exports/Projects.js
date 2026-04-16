@@ -8,7 +8,7 @@ export const Projects = [
     description:
       "Landing page estratégica para captação de clientes, desenhada com foco em conversão, clareza de proposta e leitura rápida.",
     highlight: "Combina criatividade, execução visual e prototipagem com tecnologia de baixo custo.",
-    repositoryUrl: "https://www.figma.com/design/aK1DrU6ZrbtTrJYVovBBhU/Untitled?node-id=2-1489&p=f&t=MLZmLM827CFwfpGj-0",
+    repositoryUrl: "",
     previewUrl:
       "https://clinora.com.br/",
   },
@@ -21,7 +21,7 @@ export const Projects = [
     description:
       "Design de interface para o controle modular do sistema Clinora.",
     highlight: "Combina criatividade, execução visual e prototipagem com tecnologia de baixo custo.",
-    repositoryUrl: "https://os-marble-02261911.figma.site",
+    repositoryUrl: "",
     previewUrl:
       "https://os-marble-02261911.figma.site",
   },
@@ -46,12 +46,12 @@ export const Projects = [
     description:
       "Landing page estratégica para captação de alunos, desenhada com foco em conversão, clareza de proposta e leitura rápida.",
     highlight: "Projeto com prioridade em hierarquia visual, prova de valor e condução do usuário para a ação.",
-    repositoryUrl: "https://www.figma.com/design/PpKg1VsfoXCnh9P0Y6q3L8/Untitled?node-id=1-751&p=f&t=MLZmLM827CFwfpGj-0",
+    repositoryUrl: "",
     previewUrl: "https://logos.uverse.com.vc",
   },
     {
     category: "tech",
-    project: "Formulário de Captura de Dados",
+    project: "Simulador de Empréstimo",
     image: "wordpress.png",
     typeLabel: "UX orientado à conversão",
     skills: ["WordPress", "HTML", "CSS", "JavaScript"],
@@ -71,6 +71,18 @@ export const Projects = [
       "Projeto para divulgação de eventos com preocupação clara em apresentação de datas, atrações e conteúdo de forma visualmente orientada.",
     highlight: "A camada visual foi pensada para ampliar compreensão rápida e engajamento com a programação do evento.",
     repositoryUrl: "https://github.com/GabrielZubioli/projeto-goevent",
+    previewUrl: "",
+  },
+      {
+    category: "tech",
+    project: "Numm Finance",
+    image: "Numm.png",
+    typeLabel: "Sistema financeiro",
+    skills: ["PHP", "React Native", "Expo"],
+    description:
+      "Sistema financeiro para controle de gastos, com foco em organização de categorias, visualização de despesas e experiência móvel intuitiva.",
+    highlight: "Projeto orientado a integrações seguras, fluxo financeiro e backend robusto.",
+    repositoryUrl: "",
     previewUrl: "",
   },
 
@@ -208,44 +220,7 @@ export const Projects = [
     previewUrl:
       "https://www.linkedin.com/posts/gabriel-zubioli_projetomaker-arduino-eletraeknica-activity-7370139152966770688-N6BL?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD_SV8YBjUF0_odAaDBNtM7eai_6qNM0nCA",
   },
-        {
-    category: "design",
-    project: "Design Landing Page Clinora",
-    image: "clinora.png",
-    typeLabel: "Landing page",
-    skills: ["Figma"],
-    description:
-      "Landing page estratégica para captação de clientes, desenhada com foco em conversão, clareza de proposta e leitura rápida.",
-    highlight: "Combina criatividade, execução visual e prototipagem com tecnologia de baixo custo.",
-    repositoryUrl: "https://www.figma.com/design/aK1DrU6ZrbtTrJYVovBBhU/Untitled?node-id=2-1489&p=f&t=MLZmLM827CFwfpGj-0",
-    previewUrl:
-      "https://clinora.com.br/",
-  },
-      {
-    category: "design",
-    project: "Design de controle modular Clinora",
-    image: "modulos-clinora.png",
-    typeLabel: "Design de interface",
-    skills: ["Figma"],
-    description:
-      "Design de interface para o controle modular do sistema Clinora.",
-    highlight: "Combina criatividade, execução visual e prototipagem com tecnologia de baixo custo.",
-    repositoryUrl: "https://os-marble-02261911.figma.site",
-    previewUrl:
-      "https://os-marble-02261911.figma.site",
-  },
-      {
-    category: "design",
-    project: "Design Landing Page LogosSchools",
-    image: "logosschools.png",
-    typeLabel: "Landing page",
-    skills: ["Figma"],
-    description:
-      "Landing page estratégica para captação de alunos, desenhada com foco em conversão, clareza de proposta e leitura rápida.",
-    highlight: "Projeto com prioridade em hierarquia visual, prova de valor e condução do usuário para a ação.",
-    repositoryUrl: "https://www.figma.com/design/PpKg1VsfoXCnh9P0Y6q3L8/Untitled?node-id=1-751&p=f&t=qnrHajdQHx53K6JS-0",
-    previewUrl: "https://logos.uverse.com.vc",
-  },
+
   {
     category: "design",
     project: "Logo Willian Martins Personal Trainer",
