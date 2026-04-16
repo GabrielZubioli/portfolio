@@ -1844,6 +1844,10 @@ span {
     font-size: 58%;
   }
 
+  .skill-left, .onda-top, .onda{
+    display: none;
+  }
+
   section {
     padding-inline: 2rem;
   }
