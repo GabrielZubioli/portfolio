@@ -22,8 +22,7 @@ export const Projects = [
       "Site estratégico para captação de clientes, desenhada com foco em conversão, clareza de proposta e leitura rápida.",
     highlight: "Combina criatividade, execução visual e prototipagem com tecnologia de baixo custo.",
     repositoryUrl: "",
-    previewUrl:
-      "https://otopodigital.com.br/",
+    previewUrl:"",
   },
   {
     category: "tech",
